@@ -1,9 +1,9 @@
 CC = gcc
-CFLAGS = -g -O2 -Wall -W
+CFLAGS = -g -O2 -Wall -W -fPIC
 LDFLAGS =
 LIBS = -lm
 
-all: wmm_file wmm_grid wmm_point wmmwrapper
+all: wmm_file wmm_grid wmm_point
 
 wmm_file: wmm_file.o GeomagnetismLibrary.o
 	${CC} ${LDFLAGS} -o wmm_file wmm_file.o GeomagnetismLibrary.o ${LIBS}
@@ -13,9 +13,6 @@ wmm_grid: wmm_grid.o GeomagnetismLibrary.o
 
 wmm_point: wmm_point.o GeomagnetismLibrary.o
 	${CC} ${LDFLAGS} -o wmm_point wmm_point.o GeomagnetismLibrary.o ${LIBS}
-
-wmmwrapper: wmmwrapper.o GeomagnetismLibrary.o
-	${CC} ${LDFLAGS} -o wmmwrapper wmmwrapper.o GeomagnetismLibrary.o ${LIBS}
 
 GeomagnetismLibrary.o:
 	${CC} ${CFLAGS} -c GeomagnetismLibrary.c

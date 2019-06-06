@@ -1,16 +1,6 @@
-/*--------------------------------------------------------------------------*/
+#include "wmmwrapper/wmmwrapper.h"
 
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-
-
-#include "../wmm2015_src/src/GeomagnetismHeader.h"
-/*#include "GeomagnetismLibrary.c"*/
-#include "../wmm2015_src/src/EGM9615.h"
-
-double getMagneticDeclination(double lat, double lon, double alt, double date){
+double GetMagneticDeclination(double lat, double lon, double alt, double date){
     MAGtype_MagneticModel * MagneticModels[1], *TimedMagneticModel;
     MAGtype_Ellipsoid Ellip;
     MAGtype_CoordSpherical CoordSpherical;
@@ -18,7 +8,7 @@ double getMagneticDeclination(double lat, double lon, double alt, double date){
     MAGtype_Date UserDate; // THIS STORES DATE
     MAGtype_GeoMagneticElements GeoMagneticElements, Errors;
     MAGtype_Geoid Geoid;
-    char filename[] = "../wmm2015_src/bin/WMM.COF";
+    char filename[] = "/home/jsnguyen/repos/wmmwrapper/wmm2015_src/bin/WMM.COF";
     char VersionDate[12];
     int NumTerms, nMax = 0;
     int epochs = 1;
