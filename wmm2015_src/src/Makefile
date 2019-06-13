@@ -19,4 +19,4 @@ GeomagnetismLibrary.o:
 
 clean:
 	rm -f *.o
-	rm -f wmm_file wmm_grid wmm_point wmmwrapper
+	rm -f wmm_file wmm_grid wmm_point
