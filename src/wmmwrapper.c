@@ -8,7 +8,7 @@ double GetMagneticDeclination(double lat, double lon, double alt, double date){
     MAGtype_Date UserDate; // THIS STORES DATE
     MAGtype_GeoMagneticElements GeoMagneticElements, Errors;
     MAGtype_Geoid Geoid;
-    char filename[] = "/home/jsnguyen/repos/wmmwrapper/wmm2015_src/bin/WMM.COF";
+    char filename[] = "/Users/jsn/repos/wmmwrapper/WMM2020_Linux/bin/WMM.COF";
     char VersionDate[12];
     int NumTerms, nMax = 0;
     int epochs = 1;

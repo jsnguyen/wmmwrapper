@@ -4,7 +4,7 @@ SRCDIR=src
 OBJDIR=build
 
 _INCDIRS=include \
-				 wmm2015_src/src
+				 WMM2020_Linux/src
 
 INCDIRS=$(addprefix -I,$(_INCDIRS))
 
@@ -24,7 +24,7 @@ SRCS=$(addprefix $(SRCDIR)/,$(_SRCFILES))
 _OBJFILES=$(_SRCFILES:%.c=%.o)
 OBJS=$(addprefix $(OBJDIR)/,$(_OBJFILES))
 
-_WMMOBJFILES= wmm2015_src/src/GeomagnetismLibrary.o
+_WMMOBJFILES= WMM2020_Linux/src/GeomagnetismLibrary.o
 
 LIBDIR=lib
 LIB=libww.so

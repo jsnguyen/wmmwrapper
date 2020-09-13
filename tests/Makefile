@@ -4,7 +4,7 @@ SRCDIR=.
 OBJDIR=.
 
 _INCDIRS=../include \
-				 ../wmm2015_src/src
+				 ../WMM2020_Linux/src
 
 INCDIRS=$(addprefix -I,$(_INCDIRS))
 
